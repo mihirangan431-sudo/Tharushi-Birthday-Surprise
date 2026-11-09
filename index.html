@@ -20,7 +20,7 @@ h1 span{background:linear-gradient(100deg,#fff,#ffabd1 48%,#c9aaff);-webkit-back
 .btn{border:0;border-radius:50px;padding:16px 27px;margin-top:32px;background:linear-gradient(100deg,#ff9fc9,#c3a4ff);color:#271333;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 10px 35px #d58dce35;transition:.25s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 14px 42px #d58dce55}
 .tiny{color:#bba9ce;font-size:12px;margin-top:13px}
-.orbit{margin:45px auto 0;width:110px;height:110px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 45px #ed9fc633}
+.hero-portrait{width:min(270px,68vw);margin:28px auto 0;border:5px solid #ffffff30;border-radius:28px;overflow:hidden;box-shadow:0 18px 55px #0007,0 0 35px #ed9fc633}.hero-portrait img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}.orbit{margin:24px auto 0;width:76px;height:76px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 45px #ed9fc633}
 .orbit span{font-size:42px;animation:pulse 2.5s infinite}@keyframes pulse{50%{transform:scale(1.14)}}
 .section-head{text-align:center;margin-bottom:36px}h2{font-size:clamp(34px,5vw,54px);margin:10px 0;color:#fff0fa}.desc{color:#cbbbd9;line-height:1.7}
 .gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
@@ -43,6 +43,7 @@ h1 span{background:linear-gradient(100deg,#fff,#ffabd1 48%,#c9aaff);-webkit-back
 <div><div class="kicker">A day made just for you</div>
 <h1>Happy Birthday,<br><span>Tharushi</span></h1>
 <p class="sub">A little page filled with love, smiles and wishes from your friends. Today, the spotlight is all yours.</p>
+<div class="hero-portrait"><img src="tharushi.jpg" alt="Tharushi birthday portrait"></div>
 <button class="btn" id="openBtn">Open your birthday surprise&nbsp; ✨</button>
 <div class="tiny" id="hint">Tap to begin the music and reveal your surprise</div>
 <div class="orbit"><span>🎂</span></div></div>
@@ -50,7 +51,7 @@ h1 span{background:linear-gradient(100deg,#fff,#ffabd1 48%,#c9aaff);-webkit-back
 <section id="memories">
 <div class="section-head"><div class="kicker">Little moments, lovely memories</div><h2>A gallery for you</h2><p class="desc">Five little snapshots to make your day feel extra special.</p></div>
 <div class="gallery">
-<div class="photo"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=700&auto=format&fit=crop&q=85" alt="Friends sharing a happy moment"><label>GOOD TIMES</label></div>
+<div class="photo"><img src="tharushi.jpg" alt="Tharushi birthday portrait"><label>THARUSHI</label></div>
 <div class="photo"><img src="https://images.unsplash.com/photo-1530103862676-de8c9deba0d?auto=format&fit=crop&w=700&q=85" alt="Birthday celebration"><label>CELEBRATE</label></div>
 <div class="photo"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&auto=format&fit=crop&q=85" alt="Party lights"><label>SPARKLE</label></div>
 <div class="photo"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=700&auto=format&fit=crop&q=85" alt="A cheerful celebration"><label>SMILE MORE</label></div>
