@@ -1,158 +1,29 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For Tharushi ♡</title>
-<meta name="theme-color" content="#170d2d">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
-:root{--pink:#ff9ecb;--lilac:#c7a5ff;--ink:#fff8ff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#10091f;color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 10%,#52265f 0,transparent 42%),radial-gradient(ellipse at 85% 35%,#39225e 0,transparent 40%),linear-gradient(145deg,#10091f,#1b1030 55%,#10091f)}
-.glow{position:fixed;width:260px;height:260px;border-radius:50%;filter:blur(90px);opacity:.2;z-index:-1;background:#ff7fba;top:20%;left:-100px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#e9d7fa}
-.brand{font-weight:700;color:#fff}.age{border:1px solid #ffffff55;padding:7px 13px;border-radius:30px;color:#f4c6e0}
-section{padding:82px 7%;max-width:1180px;margin:auto}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding-top:45px}
-.kicker{color:#ffc3df;letter-spacing:.28em;text-transform:uppercase;font-size:11px;font-weight:700}
-h1,h2{font-family:'Playfair Display',serif;font-weight:600}h1{font-size:clamp(52px,9vw,106px);line-height:.98;margin:22px 0 18px;letter-spacing:-.045em}
-h1 span{background:linear-gradient(100deg,#fff,#ffabd1 48%,#c9aaff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{max-width:570px;margin:0 auto;color:#d8c9e7;line-height:1.8;font-size:16px}
-.btn{border:0;border-radius:50px;padding:16px 27px;margin-top:32px;background:linear-gradient(100deg,#ff9fc9,#c3a4ff);color:#271333;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 10px 35px #d58dce35;transition:.25s}
-.btn:hover{transform:translateY(-3px);box-shadow:0 14px 42px #d58dce55}
-.tiny{color:#bba9ce;font-size:12px;margin-top:13px}
-.hero-portrait{width:min(270px,68vw);margin:28px auto 0;border:5px solid #ffffff30;border-radius:28px;overflow:hidden;box-shadow:0 18px 55px #0007,0 0 35px #ed9fc633}.hero-portrait img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}.orbit{margin:24px auto 0;width:76px;height:76px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 45px #ed9fc633}
-.orbit span{font-size:42px;animation:pulse 2.5s infinite}@keyframes pulse{50%{transform:scale(1.14)}}
-.section-head{text-align:center;margin-bottom:36px}h2{font-size:clamp(34px,5vw,54px);margin:10px 0;color:#fff0fa}.desc{color:#cbbbd9;line-height:1.7}
-.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.photo{min-height:265px;border-radius:20px;overflow:hidden;position:relative;border:1px solid #ffffff25;background:#33204c;box-shadow:0 14px 35px #0004}
-.photo img{width:100%;height:100%;min-height:265px;object-fit:cover;display:block;filter:saturate(.85);transition:transform .6s}
-.photo:hover img{transform:scale(1.06)}.photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#160d29cc)}
-.photo label{position:absolute;bottom:15px;left:15px;z-index:1;font-size:12px;letter-spacing:.12em;color:#fff}
-.wish-wrap{max-width:720px;margin:auto;padding:35px;border:1px solid #ffffff28;background:#ffffff0b;backdrop-filter:blur(12px);border-radius:26px;text-align:center;min-height:225px;display:flex;flex-direction:column;justify-content:center}
-.from{color:#ffb8d9;letter-spacing:.15em;text-transform:uppercase;font-size:12px;font-weight:700}.wish{font-family:'Playfair Display',serif;font-size:clamp(23px,4vw,34px);line-height:1.45;margin:18px 0}.counter{font-size:12px;color:#bdaaca}
-.footer{text-align:center;padding:40px 20px 55px;color:#bba9ce;font-size:12px}
-.spark{position:fixed;pointer-events:none;z-index:5;animation:fall 4s linear forwards;top:-20px}@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:0}}
-@media(max-width:850px){.gallery{grid-template-columns:repeat(2,1fr)}.photo:last-child{grid-column:span 2}.photo{min-height:220px}.photo img{min-height:220px}}
-@media(max-width:480px){section{padding:65px 6%}.gallery{gap:9px}.photo,.photo img{min-height:185px}.wish-wrap{padding:25px 18px}}
-</style>
-</head>
-<body><div class="glow"></div>
-<nav><div class="brand">A little surprise ♡</div><div class="age">15+</div></nav>
-<main>
-<section class="hero">
-<div><div class="kicker">A day made just for you</div>
-<h1>Happy Birthday,<br><span>Tharushi</span></h1>
-<p class="sub">A little page filled with love, smiles and wishes from your friends. Today, the spotlight is all yours.</p>
-<div class="hero-portrait"><img src="tharushi.jpg" alt="Tharushi birthday portrait"></div>
-<button class="btn" id="openBtn">Open your birthday surprise&nbsp; ✨</button>
-<div class="tiny" id="hint">Tap to begin the music and reveal your surprise</div>
-<div class="orbit"><span>🎂</span></div></div>
-</section>
-<section id="memories">
-<div class="section-head"><div class="kicker">Little moments, lovely memories</div><h2>A gallery for you</h2><p class="desc">Five little snapshots to make your day feel extra special.</p></div>
-<div class="gallery">
-<div class="photo"><img src="tharushi.jpg" alt="Tharushi birthday portrait"><label>THARUSHI</label></div>
-<div class="photo"><img src="https://images.unsplash.com/photo-1530103862676-de8c9deba0d?auto=format&fit=crop&w=700&q=85" alt="Birthday celebration"><label>CELEBRATE</label></div>
-<div class="photo"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&auto=format&fit=crop&q=85" alt="Party lights"><label>SPARKLE</label></div>
-<div class="photo"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=700&auto=format&fit=crop&q=85" alt="A cheerful celebration"><label>SMILE MORE</label></div>
-<div class="photo"><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=700&auto=format&fit=crop&q=85" alt="Birthday balloons"><label>YOUR DAY</label></div>
-</div>
-</section>
-<section id="wishes">
-<div class="section-head"><div class="kicker">From your favourite people</div><h2>Messages for you</h2><p class="desc">One by one, a few words from your friends.</p></div>
-<div class="wish-wrap"><div class="from" id="from">A wish for Tharushi</div><div class="wish" id="wish">May your day be as wonderful as you are. ✨</div><div class="counter" id="counter">Ready when you are</div></div>
-<div style="text-align:center"><button class="btn" id="nextBtn">Read the wishes&nbsp; →</button></div>
-</section>
-</main>
-<div class="footer">Made with ♡ for Tharushi · Keep shining</div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10091f"><title>Tharushi's Universe ✦</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><style>
+:root{--pink:#ffafd3;--lilac:#c7aaff;--gold:#ffe4a8;--ink:#fff8ff;--muted:#c8b8dc}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'DM Sans',sans-serif;background:#0b0718;overflow-x:hidden}button{font:inherit}#starscape{position:fixed;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}.space-bg{position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 18% 18%,#48245e 0,transparent 34%),radial-gradient(ellipse at 82% 64%,#33255e 0,transparent 38%),radial-gradient(ellipse at 50% 100%,#24133e 0,transparent 46%),#0b0718}.aurora{position:fixed;width:65vw;height:65vw;max-width:720px;max-height:720px;border-radius:50%;filter:blur(95px);opacity:.14;z-index:-1;pointer-events:none;background:#d65bba;left:-25vw;top:16vh;animation:drift 18s ease-in-out infinite alternate}@keyframes drift{to{transform:translate(55vw,12vh) scale(1.15);background:#7962db}}.topbar{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(18px,5vw,68px);background:linear-gradient(#0b0718a8,transparent)}.brand{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#f5d9fa}.age{font-size:11px;letter-spacing:.12em;border:1px solid #ffffff38;padding:7px 12px;border-radius:50px;color:#f8d4ec;background:#ffffff0a}.screen{min-height:100svh;padding:110px 6vw 70px;display:flex;align-items:center;justify-content:center;position:relative}.intro{text-align:center;max-width:900px;margin:auto}.eyebrow{color:var(--pink);font-size:10px;letter-spacing:.34em;text-transform:uppercase;font-weight:700}h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}h1{font-size:clamp(54px,10vw,116px);line-height:.96;letter-spacing:-.055em;margin:20px 0}h1 span,.finale-inner h2 span{display:block;background:linear-gradient(100deg,#fff 8%,#ffc2df 46%,#c5afff 82%);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:590px;margin:0 auto;color:#d9cbe8;line-height:1.85;font-size:clamp(14px,2vw,17px)}.pill-button{border:1px solid #ffffff52;border-radius:60px;padding:15px 24px;background:linear-gradient(105deg,#ffafd3,#d4b6ff 75%);color:#24122e;font-weight:700;cursor:pointer;box-shadow:0 12px 45px #d886d735;transition:transform .25s,box-shadow .25s}.pill-button:hover{transform:translateY(-3px);box-shadow:0 16px 55px #d886d75c}.enter{margin-top:30px}.small-note{font-size:11px;color:#ab9cbe;margin-top:14px}.gate-orbit{position:relative;width:130px;height:130px;border:1px solid #fff3;border-radius:50%;margin:45px auto 0;display:grid;place-items:center;box-shadow:0 0 60px #c89dff20}.gate-orbit:before,.gate-orbit:after{content:"";position:absolute;inset:-13px;border:1px solid #f6bde833;border-radius:50%;transform:rotate(-28deg) scaleY(.35)}.gate-orbit:after{transform:rotate(40deg) scaleY(.35)}.gate-star{font-size:49px;filter:drop-shadow(0 0 18px #ffe1a8);animation:twinkle 2.2s ease-in-out infinite}@keyframes twinkle{50%{transform:scale(1.16);filter:drop-shadow(0 0 30px #ffb6da)}}#universe{display:none;min-height:100svh;padding-top:120px}.universe-inner{width:min(1100px,100%);margin:auto}.section-title{text-align:center;margin-bottom:26px}.section-title h2{font-size:clamp(36px,6vw,66px);margin:10px 0;color:#fff4fb;line-height:1.03}.section-title p{color:var(--muted);line-height:1.7;margin:0 auto;max-width:550px;font-size:14px}.planet-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px;margin:12px auto 32px;isolation:isolate}.planet-halo{position:absolute;width:min(390px,76vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#f5b4e428 0,#aa88ec18 48%,transparent 70%);filter:blur(10px);z-index:-1}.planet-ring{position:absolute;width:min(430px,86vw);height:min(145px,28vw);border:1px solid #f5cbf27c;border-radius:50%;transform:rotate(-20deg);box-shadow:0 0 18px #df9bea22;z-index:2;pointer-events:none}.planet-ring:after{content:"";position:absolute;inset:8px;border:1px solid #c5b4ff4a;border-radius:50%}.planet{width:clamp(190px,36vw,280px);aspect-ratio:1;border-radius:50%;overflow:hidden;position:relative;border:2px solid #ffffff70;box-shadow:0 0 0 10px #ffffff08,0 0 48px #e4a3ee66,0 0 105px #a88dff40;z-index:1;background:#3c244e}.planet img{width:100%;height:100%;object-fit:cover;display:block}.planet:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff4b,transparent 38%,#160b334f);border-radius:50%}.planet-caption{position:absolute;bottom:5px;z-index:3;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#f8d9ef;text-shadow:0 2px 10px #000}.progress-wrap{max-width:420px;margin:0 auto 36px;text-align:center}.progress-label{font-size:11px;letter-spacing:.14em;color:#e8d6f3;margin-bottom:10px;text-transform:uppercase}.progress{height:5px;border-radius:99px;background:#ffffff20;overflow:hidden}.progress>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffacd2,#d5b9ff,#ffe5ad);border-radius:99px;transition:width .5s}.star-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.star-card{min-height:150px;border-radius:19px;border:1px solid #ffffff21;background:linear-gradient(145deg,#ffffff0f,#ffffff05);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:15px 8px;cursor:pointer;transition:transform .25s,border-color .25s,background .25s;backdrop-filter:blur(10px)}.star-card:hover{transform:translateY(-5px);border-color:#f8bade99;background:#ffffff15}.star-icon{font-size:31px;color:#ffe4aa;filter:drop-shadow(0 0 12px #ffdb8b);transition:.3s}.star-card.done .star-icon{color:#ffb6dc;filter:drop-shadow(0 0 17px #ff9fce)}.star-card.done{border-color:#ffaddc6e;background:#f5b2dc12}.star-name{font-size:12px;letter-spacing:.05em;color:#f4e8f8}.star-state{font-size:9px;color:#b8a8ca;letter-spacing:.14em;text-transform:uppercase}.portal-area{text-align:center;margin:55px auto 0;max-width:650px;padding:32px 20px;border:1px solid #ffffff20;border-radius:26px;background:#ffffff08}.portal{width:112px;height:112px;border-radius:50%;border:1px solid #f5d2ffad;background:radial-gradient(circle at 50% 50%,#fff3,#d5a0ff22 40%,#6f4a9b22 72%,transparent);display:grid;place-items:center;margin:0 auto 19px;box-shadow:0 0 35px #d4a5ff33,inset 0 0 25px #f1beff25;animation:portalPulse 3.5s infinite}.portal span{font-size:37px;filter:drop-shadow(0 0 12px #ffe0a6)}@keyframes portalPulse{50%{box-shadow:0 0 55px #d4a5ff78,inset 0 0 38px #f1beff55;transform:scale(1.04)}}.portal-area h3{font-size:30px;margin:5px 0 10px}.portal-area p{color:var(--muted);font-size:13px;line-height:1.7}.portal-area .pill-button:disabled{opacity:.42;cursor:not-allowed;filter:grayscale(.3);box-shadow:none}.modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:22px;background:#080513c9;backdrop-filter:blur(16px)}.modal.show{display:grid}.modal-card{position:relative;width:min(510px,100%);padding:38px 28px 30px;text-align:center;border-radius:28px;border:1px solid #f7c9ed66;background:linear-gradient(145deg,#332147,#1b1230 75%);box-shadow:0 20px 100px #0008;animation:pop .35s ease-out}@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}.modal-star{font-size:42px;filter:drop-shadow(0 0 15px #ffe0a6)}.modal-card h3{font-size:34px;margin:14px 0 10px}.modal-card p{font-family:'Playfair Display',serif;font-size:22px;line-height:1.5;color:#f3e3f4;margin:0 0 22px}.close{position:absolute;right:15px;top:13px;border:1px solid #ffffff30;background:#ffffff12;color:#fff;border-radius:50%;width:34px;height:34px;cursor:pointer}#finale{display:none;position:fixed;inset:0;z-index:70;overflow:auto;background:radial-gradient(ellipse at 50% 35%,#63386f,#17102d 60%,#090715);padding:70px 20px;text-align:center}#finale.show{display:grid;place-items:center}#fireworks{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}.finale-inner{max-width:720px;position:relative;z-index:2}.finale-inner h2{font-size:clamp(42px,8vw,86px);line-height:1.05;margin:18px 0;color:#fff}.finale-inner p{color:#e1d3ed;font-size:16px;line-height:1.8}.footer{text-align:center;color:#a999bc;font-size:11px;padding:28px 10px 45px}.music-toggle{position:fixed;bottom:18px;right:18px;z-index:30;border:1px solid #ffffff38;background:#211735d9;color:#fff;border-radius:50px;padding:10px 14px;font-size:11px;cursor:pointer;backdrop-filter:blur(10px)}.music-toggle[hidden]{display:none}@media(max-width:760px){.star-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.star-card{min-height:125px}.star-card:last-child{grid-column:1/-1}.planet-stage{min-height:295px}.screen{padding-left:5vw;padding-right:5vw}.topbar{padding:16px 5vw}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style></head><body><div class="space-bg"></div><div class="aurora"></div><canvas id="starscape"></canvas>
+<header class="topbar"><div class="brand">A LITTLE UNIVERSE ✦</div><div class="age">15+</div></header>
+<main><section class="screen" id="welcome"><div class="intro"><div class="eyebrow">A special universe has been waiting for you</div><h1>Made of stars,<span>made for Tharushi</span></h1><p class="lead">Some days deserve more than a simple wish. A tiny universe is opening just for you — filled with little surprises and messages from your friends.</p><button class="pill-button enter" id="enterBtn">Enter your universe&nbsp; ✦</button><div class="small-note">Turn your sound on for a little musical surprise</div><div class="gate-orbit"><span class="gate-star">✧</span></div></div></section>
+<section id="universe" class="screen"><div class="universe-inner"><div class="section-title"><div class="eyebrow">A whole universe, just for today</div><h2>Welcome to your galaxy</h2><p>At the centre of this little universe is its brightest star. Around it are ten stars, each carrying a wish from a friend.</p></div><div class="planet-stage"><div class="planet-halo"></div><div class="planet"><img src="tharushi.jpg" alt="Tharushi"></div><div class="planet-ring"></div><div class="planet-caption">THARUSHI · THE BRIGHTEST STAR</div></div><div class="progress-wrap"><div class="progress-label" id="progressLabel">0 of 10 wishes discovered</div><div class="progress"><span id="progressBar"></span></div></div><div class="section-title"><div class="eyebrow">Tap a star to discover a wish</div><h2>Your constellation</h2><p>Every star has a message. Discover all ten to unlock a final surprise.</p></div><div class="star-grid" id="starGrid"></div><div class="portal-area"><div class="portal"><span>✦</span></div><h3>The secret portal</h3><p id="portalText">Ten little stars are holding the key. Discover every wish to open the final chapter.</p><button class="pill-button" id="portalBtn" disabled>Unlock the final surprise&nbsp; ✧</button></div></div></section></main>
+<div class="footer">Made with a little stardust and lots of friendship ♡</div><button class="music-toggle" id="musicToggle" hidden>♫ Music on</button>
+<div class="modal" id="wishModal" role="dialog" aria-modal="true"><div class="modal-card"><button class="close" id="closeModal" aria-label="Close">×</button><div class="modal-star">✦</div><div class="eyebrow">A message from your constellation</div><h3 id="modalName">A friend</h3><p id="modalWish"></p><button class="pill-button" id="nextStar">Discover another star</button></div></div>
+<div id="finale"><canvas id="fireworks"></canvas><div class="finale-inner"><div class="eyebrow">The universe has one last thing to say</div><h2>In this endless universe,<span> today is your day, Tharushi.</span></h2><p>May the days ahead bring you new adventures, kind people, happy surprises and a thousand little reasons to smile. Keep shining in your own beautiful way.</p><div style="font-family:'Playfair Display',serif;font-size:25px;color:#ffd8eb;margin:26px 0">Happy Birthday ♡</div><button class="pill-button" id="backBtn">Back to your universe</button></div></div>
 <script>
-const wishes=[
-["Nethum","Wishing you a beautiful birthday filled with happiness, laughter and unforgettable memories. Keep shining! 💗"],
-["Nandika","Hope this year brings you countless reasons to smile and dreams that come true. Happy Birthday! ✨"],
-["Madahas","Have the happiest birthday! May every new day bring you something wonderful. 🎀"],
-["Pasidu","Wishing you good vibes, great memories and a year full of success. Enjoy your special day! 🎉"],
-["Risath","May your birthday be full of fun, love and all your favourite things. Have an amazing one! 🌸"],
-["Sadalu","Keep smiling, keep dreaming and make this year your best one yet. Happy Birthday! 💜"],
-["Manethu","Sending you lots of happiness today and always. Hope your day is truly special! 🌷"],
-["Gimasha","May your day sparkle with joy and your year be filled with beautiful moments. 💫"],
-["Adeesha","Wishing you laughter that never ends and memories you will always treasure. Happy Birthday! 🎂"],
-["Nethmi","Hope all the little things that make you happy find their way to you today. Have the best birthday! 💕"]
-];
-let index=-1,started=false,audioCtx=null;
-function startMusic(){
- try{
-  audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-  const ctx=audioCtx, bpm=108, beat=60/bpm, master=ctx.createGain(), comp=ctx.createDynamicsCompressor();
-  master.gain.value=.78; comp.threshold.value=-18; comp.knee.value=18; comp.ratio.value=3;
-  master.connect(comp); comp.connect(ctx.destination);
-  const start=ctx.currentTime+.12;
-  const hz=m=>440*Math.pow(2,(m-69)/12);
-  function envGain(g,t,a,d,s,r,dur){
-   g.gain.setValueAtTime(.0001,t); g.gain.linearRampToValueAtTime(a,t+d);
-   g.gain.setValueAtTime(a*s,t+d+Math.max(.02,dur-d-r));
-   g.gain.exponentialRampToValueAtTime(.0001,t+dur);
-  }
-  function pluck(freq,t,dur,vol=.1,pan=0,bright=false){
-   const out=ctx.createGain(), p=ctx.createStereoPanner(); p.pan.value=pan; out.connect(p); p.connect(master);
-   const v=bright?[1,.42,.2,.08]:[1,.34,.12];
-   v.forEach((amp,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type=i===0?'triangle':'sine';o.frequency.value=freq*(i+1);g.gain.value=amp;o.connect(g);g.connect(out);o.start(t);o.stop(t+dur+.03);});
-   envGain(out,t,vol,.012,.18,Math.min(.18,dur*.45),dur);
-  }
-  function pad(freq,t,dur,vol=.022,pan=0){
-   const o=ctx.createOscillator(),filter=ctx.createBiquadFilter(),g=ctx.createGain(),p=ctx.createStereoPanner();
-   o.type='triangle';o.frequency.value=freq;filter.type='lowpass';filter.frequency.value=1500;
-   o.connect(filter);filter.connect(g);g.connect(p);p.connect(master);p.pan.value=pan;
-   envGain(g,t,vol,.25,.8,.35,dur);o.start(t);o.stop(t+dur+.05);
-  }
-  function bass(freq,t,dur,vol=.095){
-   const o=ctx.createOscillator(),g=ctx.createGain(),f=ctx.createBiquadFilter();
-   o.type='sine';o.frequency.value=freq;f.type='lowpass';f.frequency.value=280;
-   o.connect(f);f.connect(g);g.connect(master);envGain(g,t,vol,.015,.35,.12,dur);o.start(t);o.stop(t+dur+.03);
-  }
-  function kick(t){
-   const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.setValueAtTime(115,t);o.frequency.exponentialRampToValueAtTime(43,t+.16);
-   g.gain.setValueAtTime(.22,t);g.gain.exponentialRampToValueAtTime(.0001,t+.23);o.connect(g);g.connect(master);o.start(t);o.stop(t+.24);
-  }
-  function noiseHit(t,dur,vol,cutoff){
-   const n=Math.floor(ctx.sampleRate*dur),buf=ctx.createBuffer(1,n,ctx.sampleRate),data=buf.getChannelData(0);
-   for(let i=0;i<n;i++)data[i]=Math.random()*2-1;
-   const src=ctx.createBufferSource(),f=ctx.createBiquadFilter(),g=ctx.createGain();
-   src.buffer=buf;f.type='highpass';f.frequency.value=cutoff;src.connect(f);f.connect(g);g.connect(master);
-   g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+dur);src.start(t);src.stop(t+dur+.01);
-  }
-  const chordData=[
-   {root:48,notes:[60,64,67,72]},{root:43,notes:[59,62,67,71]},
-   {root:45,notes:[60,64,69,72]},{root:41,notes:[57,60,65,69]}
-  ];
-  const top=[
-   [72,76,79,76,74,76,79,81],[79,81,84,81,79,76,74,72],
-   [76,79,81,84,81,79,76,74],[72,null,74,76,79,76,74,72]
-  ];
-  for(let bar=0;bar<12;bar++){
-   const chord=chordData[bar%4], t=start+bar*4*beat;
-   chord.notes.slice(0,3).forEach((m,i)=>pad(hz(m),t,4*beat,.018,[-.25,0,.25][i]));
-   const arp=[chord.root+12,chord.notes[2],chord.notes[1]+12,chord.notes[2],chord.notes[3],chord.notes[2],chord.notes[1]+12,chord.notes[2]];
-   arp.forEach((m,i)=>pluck(hz(m),t+i*.5*beat,.38*beat,.065,i%2?-.22:.22));
-   bass(hz(chord.root),t,1.65*beat,.11);bass(hz(chord.root+7),t+2*beat,1.55*beat,.085);
-   for(let b=0;b<4;b++){const bt=t+b*beat;if(b===0||b===2)kick(bt);else noiseHit(bt,.15,.09,850);}
-   for(let h=0;h<8;h++)noiseHit(t+h*.5*beat,.035,h%2?.019:.012,6500);
-   let phrase=top[bar%4];
-   phrase.forEach((m,i)=>{
-    if(m===null)return;
-    let pitch=m+(bar>=8?2:bar>=4?0:0);
-    const noteTime=t+i*.5*beat;
-    pluck(hz(pitch),noteTime,.43*beat,bar>=8?.11:.09,.04,true);
-    if(bar>=8)pluck(hz(pitch+12),noteTime,.3*beat,.018,-.12,true);
-   });
-  }
-  // final warm chord to let the phrase land naturally
-  const last=start+12*4*beat;
-  [60,64,67,72].forEach((m,i)=>pad(hz(m),last,.95,.035,(i-1.5)*.16));
- }catch(e){console.warn('Music could not start',e);}
-}
-function confetti(){const chars=['✦','♡','✧','✿'];for(let i=0;i<30;i++){const s=document.createElement('span');s.className='spark';s.textContent=chars[Math.floor(Math.random()*chars.length)];s.style.left=Math.random()*100+'vw';s.style.color=['#ffc0df','#d6bdff','#fff'][i%3];s.style.fontSize=(12+Math.random()*17)+'px';s.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),6500)}}
-document.getElementById('openBtn').addEventListener('click',()=>{if(!started){started=true;startMusic();confetti();document.getElementById('openBtn').textContent='Surprise opened ♡';document.getElementById('hint').textContent='Music is playing · Scroll down for your wishes';document.getElementById('memories').scrollIntoView({behavior:'smooth'});}});
-function showWish(){index++;if(index>=wishes.length){index=0}const [name,msg]=wishes[index];const from=document.getElementById('from'),wish=document.getElementById('wish');from.textContent=name+' wished you…';wish.textContent='';let n=0;const timer=setInterval(()=>{wish.textContent=msg.slice(0,++n);if(n>=msg.length)clearInterval(timer)},28);document.getElementById('counter').textContent='Wish '+(index+1)+' of '+wishes.length;document.getElementById('nextBtn').textContent=index===wishes.length-1?'Read again ↻':'Next wish →';}
-document.getElementById('nextBtn').addEventListener('click',showWish);
-</script>
-</body></html>
+const wishes=[["Nethum","Wishing you a beautiful birthday filled with happiness, laughter and unforgettable memories. Keep shining! 💗"],["Nandika","Hope this year brings you countless reasons to smile and dreams that come true. Happy Birthday! ✨"],["Madahas","Have the happiest birthday! May every new day bring you something wonderful. 🎀"],["Pasidu","Wishing you good vibes, great memories and a year full of success. Enjoy your special day! 🎉"],["Risath","May your birthday be full of fun, kindness and all your favourite things. Have an amazing one! 🌸"],["Sadalu","Keep smiling, keep dreaming and make this year your best one yet. Happy Birthday! 💜"],["Manethu","Sending you lots of happiness today and always. Hope your day is truly special! 🌷"],["Gimasha","May your day sparkle with joy and your year be filled with beautiful moments. 💫"],["Adeesha","Wishing you laughter that never ends and memories you will always treasure. Happy Birthday! 🎂"],["Nethmi","Hope all the little things that make you happy find their way to you today. Have the best birthday! 💕"]];
+const discovered=new Set(),grid=document.getElementById('starGrid'),progressLabel=document.getElementById('progressLabel'),progressBar=document.getElementById('progressBar'),portalBtn=document.getElementById('portalBtn');let audio=null,musicOn=false,fireworkFrame=null;
+function buildStars(){wishes.forEach((w,i)=>{const b=document.createElement('button');b.className='star-card';b.type='button';b.innerHTML='<span class="star-icon">✦</span><span class="star-name">'+w[0]+'</span><span class="star-state">Undiscovered</span>';b.addEventListener('click',()=>openWish(i));grid.appendChild(b)})}
+function updateProgress(){const n=discovered.size;progressLabel.textContent=n+' of 10 wishes discovered';progressBar.style.width=n*10+'%';[...grid.children].forEach((b,i)=>{if(discovered.has(i)){b.classList.add('done');b.querySelector('.star-state').textContent='Discovered';b.querySelector('.star-icon').textContent='✧'}});if(n===10){portalBtn.disabled=false;document.getElementById('portalText').textContent='All ten stars are shining. Your final surprise is ready.';portalBtn.textContent='Open the final surprise ✨'}}
+function openWish(i){discovered.add(i);updateProgress();document.getElementById('modalName').textContent=wishes[i][0];document.getElementById('modalWish').textContent=wishes[i][1];document.getElementById('wishModal').classList.add('show')}
+function closeWish(){document.getElementById('wishModal').classList.remove('show')}
+document.getElementById('closeModal').addEventListener('click',closeWish);document.getElementById('nextStar').addEventListener('click',()=>{closeWish();const n=wishes.findIndex((w,i)=>!discovered.has(i));if(n>=0)openWish(n)});document.getElementById('wishModal').addEventListener('click',e=>{if(e.target.id==='wishModal')closeWish()});
+function startMusic(){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;audio=new C();const ctx=audio,master=ctx.createGain(),comp=ctx.createDynamicsCompressor();master.gain.value=.42;comp.threshold.value=-20;comp.ratio.value=3;master.connect(comp);comp.connect(ctx.destination);const hz=m=>440*Math.pow(2,(m-69)/12),chords=[[60,64,67,72],[55,59,62,67],[57,60,64,69],[53,57,60,65]],melody=[[72,76,79,76,74,76,79,84],[79,81,84,81,79,76,74,72],[76,79,81,84,81,79,76,74],[72,74,76,79,76,74,72,67]],beat=60/104,start=ctx.currentTime+.08;function tone(freq,t,dur,vol,type='triangle'){const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(vol,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(master);o.start(t);o.stop(t+dur+.02)}chords.forEach((ch,bar)=>ch.forEach((m)=>tone(hz(m),start+bar*4*beat,3.7*beat,.018,'sine')));for(let bar=0;bar<8;bar++){const t=start+bar*4*beat;melody[bar%4].forEach((m,i)=>{tone(hz(m),t+i*.5*beat,.42*beat,.075);tone(hz(m+12),t+i*.5*beat,.3*beat,.018,'sine')});for(let b=0;b<4;b++)tone(hz(chords[bar%4][0]-12),t+b*beat,.19*beat,.065,'sine')}musicOn=true;document.getElementById('musicToggle').hidden=false;document.getElementById('musicToggle').textContent='♫ Music on'}catch(e){console.log(e)}}
+function stopMusic(){if(audio){audio.close();audio=null}musicOn=false;document.getElementById('musicToggle').textContent='♫ Music off'}
+document.getElementById('musicToggle').addEventListener('click',()=>musicOn?stopMusic():startMusic());
+function confetti(){for(let i=0;i<70;i++){const s=document.createElement('i');s.textContent=['✦','✧','♡','·'][i%4];s.style.cssText='position:fixed;z-index:80;left:'+Math.random()*100+'vw;top:-25px;color:'+['#ffd6e9','#e1c5ff','#ffe7ac'][i%3]+';font-size:'+(12+Math.random()*20)+'px;pointer-events:none;animation:fall 4s linear forwards';document.body.appendChild(s);setTimeout(()=>s.remove(),5000)}}
+const style=document.createElement('style');style.textContent='@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:0}}';document.head.appendChild(style);
+document.getElementById('enterBtn').addEventListener('click',()=>{startMusic();confetti();document.getElementById('welcome').style.display='none';document.getElementById('universe').style.display='flex';document.getElementById('universe').scrollIntoView({behavior:'smooth'})});
+portalBtn.addEventListener('click',()=>{if(discovered.size===10){document.getElementById('finale').classList.add('show');confetti();startFireworks()}});
+document.getElementById('backBtn').addEventListener('click',()=>{document.getElementById('finale').classList.remove('show');stopFireworks();document.getElementById('universe').scrollIntoView({behavior:'smooth'})});
+function startFireworks(){const c=document.getElementById('fireworks'),ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const p=[];let last=0;function launch(){const x=Math.random()*c.width,y=Math.random()*c.height*.48+40,h=290+Math.random()*65;for(let i=0;i<48;i++){const a=Math.PI*2*i/48,s=1+Math.random()*3;p.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:75,h})}}function frame(){ctx.clearRect(0,0,c.width,c.height);if(performance.now()-last>650){launch();last=performance.now()}for(let i=p.length-1;i>=0;i--){const q=p[i];q.x+=q.vx;q.y+=q.vy;q.vy+=.018;q.life--;ctx.globalAlpha=Math.max(0,q.life/80);ctx.fillStyle='hsl('+q.h+',90%,78%)';ctx.beginPath();ctx.arc(q.x,q.y,2,0,Math.PI*2);ctx.fill();if(q.life<=0)p.splice(i,1)}ctx.globalAlpha=1;fireworkFrame=requestAnimationFrame(frame)}frame()}
+function stopFireworks(){if(fireworkFrame)cancelAnimationFrame(fireworkFrame);fireworkFrame=null;const c=document.getElementById('fireworks');c.getContext('2d').clearRect(0,0,c.width,c.height)}
+let stars=[],sc=document.getElementById('starscape').getContext('2d');function sizeStars(){const c=document.getElementById('starscape');c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;sc.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(190,Math.floor(innerWidth*.23))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+.2,a:Math.random()*.65+.2,v:Math.random()*.012+.003}))}function drawStars(){sc.clearRect(0,0,innerWidth,innerHeight);stars.forEach(s=>{s.a+=s.v;if(s.a>.9||s.a<.15)s.v*=-1;sc.globalAlpha=s.a;sc.fillStyle='#fff3f8';sc.beginPath();sc.arc(s.x,s.y,s.r,0,Math.PI*2);sc.fill()});sc.globalAlpha=1;requestAnimationFrame(drawStars)}window.addEventListener('resize',sizeStars);sizeStars();drawStars();buildStars();
+</script></body></html>
