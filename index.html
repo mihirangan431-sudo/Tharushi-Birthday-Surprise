@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Tharushi ♡</title>
+<meta name="theme-color" content="#170d2d">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--pink:#ff9ecb;--lilac:#c7a5ff;--ink:#fff8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#10091f;color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 10%,#52265f 0,transparent 42%),radial-gradient(ellipse at 85% 35%,#39225e 0,transparent 40%),linear-gradient(145deg,#10091f,#1b1030 55%,#10091f)}
+.glow{position:fixed;width:260px;height:260px;border-radius:50%;filter:blur(90px);opacity:.2;z-index:-1;background:#ff7fba;top:20%;left:-100px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#e9d7fa}
+.brand{font-weight:700;color:#fff}.age{border:1px solid #ffffff55;padding:7px 13px;border-radius:30px;color:#f4c6e0}
+section{padding:82px 7%;max-width:1180px;margin:auto}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding-top:45px}
+.kicker{color:#ffc3df;letter-spacing:.28em;text-transform:uppercase;font-size:11px;font-weight:700}
+h1,h2{font-family:'Playfair Display',serif;font-weight:600}h1{font-size:clamp(52px,9vw,106px);line-height:.98;margin:22px 0 18px;letter-spacing:-.045em}
+h1 span{background:linear-gradient(100deg,#fff,#ffabd1 48%,#c9aaff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{max-width:570px;margin:0 auto;color:#d8c9e7;line-height:1.8;font-size:16px}
+.btn{border:0;border-radius:50px;padding:16px 27px;margin-top:32px;background:linear-gradient(100deg,#ff9fc9,#c3a4ff);color:#271333;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 10px 35px #d58dce35;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 42px #d58dce55}
+.tiny{color:#bba9ce;font-size:12px;margin-top:13px}
+.orbit{margin:45px auto 0;width:110px;height:110px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 45px #ed9fc633}
+.orbit span{font-size:42px;animation:pulse 2.5s infinite}@keyframes pulse{50%{transform:scale(1.14)}}
+.section-head{text-align:center;margin-bottom:36px}h2{font-size:clamp(34px,5vw,54px);margin:10px 0;color:#fff0fa}.desc{color:#cbbbd9;line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.photo{min-height:265px;border-radius:20px;overflow:hidden;position:relative;border:1px solid #ffffff25;background:#33204c;box-shadow:0 14px 35px #0004}
+.photo img{width:100%;height:100%;min-height:265px;object-fit:cover;display:block;filter:saturate(.85);transition:transform .6s}
+.photo:hover img{transform:scale(1.06)}.photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#160d29cc)}
+.photo label{position:absolute;bottom:15px;left:15px;z-index:1;font-size:12px;letter-spacing:.12em;color:#fff}
+.wish-wrap{max-width:720px;margin:auto;padding:35px;border:1px solid #ffffff28;background:#ffffff0b;backdrop-filter:blur(12px);border-radius:26px;text-align:center;min-height:225px;display:flex;flex-direction:column;justify-content:center}
+.from{color:#ffb8d9;letter-spacing:.15em;text-transform:uppercase;font-size:12px;font-weight:700}.wish{font-family:'Playfair Display',serif;font-size:clamp(23px,4vw,34px);line-height:1.45;margin:18px 0}.counter{font-size:12px;color:#bdaaca}
+.footer{text-align:center;padding:40px 20px 55px;color:#bba9ce;font-size:12px}
+.spark{position:fixed;pointer-events:none;z-index:5;animation:fall 4s linear forwards;top:-20px}@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:0}}
+@media(max-width:850px){.gallery{grid-template-columns:repeat(2,1fr)}.photo:last-child{grid-column:span 2}.photo{min-height:220px}.photo img{min-height:220px}}
+@media(max-width:480px){section{padding:65px 6%}.gallery{gap:9px}.photo,.photo img{min-height:185px}.wish-wrap{padding:25px 18px}}
+</style>
+</head>
+<body><div class="glow"></div>
+<nav><div class="brand">A little surprise ♡</div><div class="age">15+</div></nav>
+<main>
+<section class="hero">
+<div><div class="kicker">A day made just for you</div>
+<h1>Happy Birthday,<br><span>Tharushi</span></h1>
+<p class="sub">A little page filled with love, smiles and wishes from your friends. Today, the spotlight is all yours.</p>
+<button class="btn" id="openBtn">Open your birthday surprise&nbsp; ✨</button>
+<div class="tiny" id="hint">Tap to begin the music and reveal your surprise</div>
+<div class="orbit"><span>🎂</span></div></div>
+</section>
+<section id="memories">
+<div class="section-head"><div class="kicker">Little moments, lovely memories</div><h2>A gallery for you</h2><p class="desc">Five little snapshots to make your day feel extra special.</p></div>
+<div class="gallery">
+<div class="photo"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=700&auto=format&fit=crop&q=85" alt="Friends sharing a happy moment"><label>GOOD TIMES</label></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debaik?auto=format&fit=crop&w=700&q=85" alt="Birthday celebration"><label>CELEBRATE</label></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&auto=format&fit=crop&q=85" alt="Party lights"><label>SPARKLE</label></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=700&auto=format&fit=crop&q=85" alt="A cheerful celebration"><label>SMILE MORE</label></div>
+<div class="photo"><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=700&auto=format&fit=crop&q=85" alt="Birthday balloons"><label>YOUR DAY</label></div>
+</div>
+</section>
+<section id="wishes">
+<div class="section-head"><div class="kicker">From your favourite people</div><h2>Messages for you</h2><p class="desc">One by one, a few words from your friends.</p></div>
+<div class="wish-wrap"><div class="from" id="from">A wish for Tharushi</div><div class="wish" id="wish">May your day be as wonderful as you are. ✨</div><div class="counter" id="counter">Ready when you are</div></div>
+<div style="text-align:center"><button class="btn" id="nextBtn">Read the wishes&nbsp; →</button></div>
+</section>
+</main>
+<div class="footer">Made with ♡ for Tharushi · Keep shining</div>
+<script>
+const wishes=[
+["Nethum","Wishing you a beautiful birthday filled with happiness, laughter and unforgettable memories. Keep shining! 💗"],
+["Nandika","Hope this year brings you countless reasons to smile and dreams that come true. Happy Birthday! ✨"],
+["Madahas","Have the happiest birthday! May every new day bring you something wonderful. 🎀"],
+["Pasidu","Wishing you good vibes, great memories and a year full of success. Enjoy your special day! 🎉"],
+["Risath","May your birthday be full of fun, love and all your favourite things. Have an amazing one! 🌸"],
+["Sadalu","Keep smiling, keep dreaming and make this year your best one yet. Happy Birthday! 💜"],
+["Manethu","Sending you lots of happiness today and always. Hope your day is truly special! 🌷"],
+["Gimasha","May your day sparkle with joy and your year be filled with beautiful moments. 💫"],
+["Adeesha","Wishing you laughter that never ends and memories you will always treasure. Happy Birthday! 🎂"],
+["Nethmi","Hope all the little things that make you happy find their way to you today. Have the best birthday! 💕"]
+];
+let index=-1,started=false,audioCtx=null,melodyTimer=null;
+function startMusic(){
+ try{audioCtx=new (window.AudioContext||window.webkitAudioContext)();const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,783.99,659.25,587.33,523.25,392];
+ let t=audioCtx.currentTime+.08;let i=0;
+ melodyTimer=setInterval(()=>{if(!audioCtx)return;const f=notes[i%notes.length],o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.075,audioCtx.currentTime+.025);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.34);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+.36);i++;},370);
+ }catch(e){}
+}
+function confetti(){const chars=['✦','♡','✧','✿'];for(let i=0;i<30;i++){const s=document.createElement('span');s.className='spark';s.textContent=chars[Math.floor(Math.random()*chars.length)];s.style.left=Math.random()*100+'vw';s.style.color=['#ffc0df','#d6bdff','#fff'][i%3];s.style.fontSize=(12+Math.random()*17)+'px';s.style.animationDuration=(3+Math.random()*3)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),6500)}}
+document.getElementById('openBtn').addEventListener('click',()=>{if(!started){started=true;startMusic();confetti();document.getElementById('openBtn').textContent='Surprise opened ♡';document.getElementById('hint').textContent='Music is playing · Scroll down for your wishes';document.getElementById('memories').scrollIntoView({behavior:'smooth'});}});
+function showWish(){index++;if(index>=wishes.length){index=0}const [name,msg]=wishes[index];const from=document.getElementById('from'),wish=document.getElementById('wish');from.textContent=name+' wished you…';wish.textContent='';let n=0;const timer=setInterval(()=>{wish.textContent=msg.slice(0,++n);if(n>=msg.length)clearInterval(timer)},28);document.getElementById('counter').textContent='Wish '+(index+1)+' of '+wishes.length;document.getElementById('nextBtn').textContent=index===wishes.length-1?'Read again ↻':'Next wish →';}
+document.getElementById('nextBtn').addEventListener('click',showWish);
+</script>
+</body></html>
